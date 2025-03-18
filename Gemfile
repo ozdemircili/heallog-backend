@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.2.0"
+ruby "3.2.0"
 
 gem "active_model_serializers", "~> 0.9.2"
 gem "airbrake"
