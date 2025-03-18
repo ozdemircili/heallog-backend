@@ -1,0 +1,35 @@
+<div id="pat-signin-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+
+        <div class="row">
+          <div class="col-lg-3 col-lg-offset-9">
+            <%= simple_form_for(Patient.new, as: "patient", url: session_path("patient")) do |f| %>
+              <div class="form-inputs">
+                <%= f.input :email, required: true, autofocus: true, label: false, placeholder: "Email" %>
+                <%= f.input :password, required: false, label: false, placeholder: "Password" %>
+                <% if ENV.fetch("ENABLE_TWO_FACTOR_AUTH"){false} %>
+                  <div class="row">
+                    <div class="col-lg-9">
+                      <%= f.input :otp_attempt,  label: false, placeholder: "OTP" %>
+                    </div>
+                    <div class="col-lg-3">
+                      <%= link_to "Get code", "", class: "send-code-link" %>
+                    </div>
+                  </div>
+                <% end %>
+                <%#= f.input :remember_me, as: :boolean %>
+              </div>
+
+              <div class="form-actions">
+                <%= f.button :submit, "Log in", class: "expand btn btn-success" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+

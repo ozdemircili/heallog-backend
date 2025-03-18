@@ -1,0 +1,32 @@
+<div id="hl-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+
+        <div class="row">
+          <div class="col-lg-6 col-lg-offset-2">
+            <%= simple_form_for(:contact,  url: contact_us_path, remote: true) do |f| %>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <%= f.input :name, required: true, autofocus: true, label: false, placeholder: "Your Name" %>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <%= f.input :email, as: :email, required: true, autofocus: true, label: false, placeholder: "Email" %>
+                  </div>
+                </div>
+              </div>
+              <%= f.input :message, as: :text, required: false, autofocus: true, label: false, placeholder: "Message" %>
+              <%= f.submit "Contact Us", class: "btn btn-success pull-right" %>
+              <button type="button" class="close pull-left" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <% end %>
+            <!-- Begin MailChimp Signup Form -->
+          </div>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+

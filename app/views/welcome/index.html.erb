@@ -1,0 +1,281 @@
+<header class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+  </div>
+  <a class="navbar-brand" href="#"><%=image_tag("logo.png")%></a>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="navbar-collapse-1">
+
+    <ul class="nav navbar-nav navbar-left">
+      <!--
+      <li><%= link_to "BLOG", "" %></li>
+      -->
+      <li data-menuanchor="howItWorks"><%= link_to "HOW IT WORKS?", "#howItWorks" %></li>
+      <li><%= link_to "CONTACT US", "#", data:{toggle: :modal, target: "#hl-modal"}%></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+      <%= link_to "", data:{toggle: :modal, target: "#pat-signin-modal"} do %>
+        <%= icon('user') %> Login as a Patient
+      <% end %>
+      </li>
+      <li>
+      <%= link_to "", data:{toggle: :modal, target: "#doc-signin-modal"} do %>
+        <%= icon('user-md') %> Login as a Doctor
+      <% end %>
+      </li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</div>
+</header>
+<div id="fullpage">
+  <div class="section" id="page1" data-anchor="intro">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-offset-1 col-md-2 text-center">
+        </div>
+        <div class="col-md-offset-2 col-md-7">
+          <h1>Health records made easy.</h1>
+          <div class="row">
+            <div class="col-md-6 text-light">
+              <h3 class="gold">ARE YOU A PATIENT?</h3>
+              <p class="subtitle">Take control of your data.</p>
+              <p>Say goodbye to losing track of your health data scattered over multiple doctors and multiple hospitals. A unique way to collect your health records and your real-time data under one secure system.</p>
+              <p>Use advanced harvesting to collect all your real-time data collected by multiple devices.</p>
+          </div>
+          <div class="col-md-6 text-light">
+            <h3 class="gold">ARE YOU A DOCTOR?</h3>
+            <p class="subtitle">Get real-time patient data.</p>
+            <p>
+            Get real-time health data for your patients, take notes and compare the history of the patients with one click. Track your patients’ evaluation with wearable health devices, suggest them on-the-fly.
+            </p>
+            <p>
+            See the patient comments and get real-time alerts on your patients’ status.
+            </p>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 20px;">
+          <div class="col-md-6">
+              <%= link_to "#", class: ["btn", "btn-success", "pull-left"], data:{toggle: :modal, target: "#beta-modal"} do %>
+                Create Your Profile <%= icon "chevron-circle-right" %>
+            <% end %>
+          </div>
+          <div class="col-md-6">
+            <%= link_to "#", class: ["btn", "btn-success", "pull-left"], data:{toggle: :modal, target: "#beta-modal"} do %>
+              Create Your Account <%= icon "chevron-circle-right" %>
+          <% end %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12" style="text-align: center; padding-top: 30px">
+            <p class="red" style="font-weight: bold; font-size: 16pt;">READY FOR A DEMO?</p>
+            <%= link_to patient_demo_path, class: ["btn", "btn-info"] do %>
+              Log in now <%= icon "chevron-circle-right" %>
+          <% end %>
+        </diV>
+        </div>
+        </div>
+      </div><!-- close row -->
+    </div>
+  </div><!-- close section -->
+  <div class="section" id="page2" data-anchor="slide2">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-offset-5 col-md-7">
+          <h1>Time to revolutionize the health sector.</h1>
+          <div class="row">
+            <div class="col-md-9 ">
+              <dl class="dl-horizontal">
+                <dt class="gold no-top-margin"><%= icon("paste") %></dt>
+                <dd><strong>Patient-friendly.</strong> Intuitive dashboards to see your vitals, comments and your historical health records.</dd>
+                <dt class="gold"><%= icon("pencil") %></dt>
+                <dd><strong>No waiting.</strong> Don't wait until the next appointment to get feedback. Your real-time data and comments are automatically sent over to your doctor.</dd>
+                <dt class="gold"><%= icon("stack-exchange") %></dt>
+                <dd><strong>24/7 care.</strong> Do you suffer from a chronic disease? Your doctor is alerted with real-time updates about your vitals.</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="section2" data-anchor="dataSources">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12" style="text-align: center">
+          <h1>We take data from anywhere!</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-1 col-md-4 image-grid">
+          <h3>APPS & SERVICES</h3>
+          <div class="row">
+            <div class="col-md-3">
+              <%=image_tag("devices/dailymile.png")%>
+            </div>
+            <div class="col-md-3">
+              <%=image_tag("devices/mapmyfitness.png")%>
+            </div>
+            <div class="col-md-3">
+              <%=image_tag("devices/strava.png")%>
+            </div>
+            <div class="col-md-3">
+              <%=image_tag("devices/runkeeper.png")%>
+            </div>
+          </div>
+        </div><!--
+        --><div class="col-md-7 image-grid">
+          <h3>DEVICES</h3>
+          <div class="row">
+            <div class="col-md-2">
+              <%=image_tag("devices/basis.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/body-core.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/body-link.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/fitbit-flex.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/fitbit-force.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/fitbit-one.png")%>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <%=image_tag("devices/jawbone-up.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/jawbone-24.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/nike-fuel.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/fitbug-air.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/fitbug-go.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/fitbug-orb.png")%>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <%=image_tag("devices/withings-pulse.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/ihealth-activity.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/pebble.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/pebble-steel.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/lumoback.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/omron.png")%>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <%=image_tag("devices/fitbit-aria.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/fitbit-one.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/withings-scale.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/ihealth-scale.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/glooko.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/ihealth-glucose.png")%>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <%=image_tag("devices/ihealth-bp.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/withings-bp.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/ihealth-sp.png")%>
+            </div>
+            <div class="col-md-2">
+              <%=image_tag("devices/vitadock.png")%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="page3" data-anchor="howItWorks">
+    <div class="container-fluid">
+      <div class="row">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h1>How it Works</h1>
+              <a href="#" data-toggle="modal" data-target="#video" style="font-size: 2rem;">Watch the video</a><br>          
+              <%=image_tag("how_it_works.png", width: 1100)%>
+              <br/>
+              <br/>
+              <br/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="veil">
+</div>
+<%= render 'contact_us_modal' %>
+
+<%= render 'doc_signin_modal' %>
+<%= render 'pat_signin_modal' %>
+
+<%= render 'doc_signup_modal' %>
+<%= render 'pat_signup_modal' %>
+
+<div id="beta-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <h3>Sorry! We are currently in private beta.</h3>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="video" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <iframe src="//player.vimeo.com/video/120451597" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/120451597">Heallog Promo Video</a> from <a href="https://vimeo.com/user37737519">Heallog</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

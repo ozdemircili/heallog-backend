@@ -1,0 +1,44 @@
+tests:
+  colesterol: 
+    unit: "mg/dL" 
+    matches: 
+      - "COLESTEROL HDL"
+    nested_fields:
+      enzimatic: 
+        unit: "mmol/L"
+        matches: 
+          - "Mèt: Enzimàtic"
+      
+  ptt: 
+    unit: "segons"
+    matches: 
+      - "TROMBOPLASTINA PARCIAL)"
+
+  glucemia:
+    unit: "mgr/dL"
+    matches: 
+      - "GLUCEMIA"
+      
+  uricemia: 
+    unit: "mgr/dL"
+    matches: 
+      - "URICEMIA"
+
+  prothrombin_time: 
+    unit: nil 
+    matches: 
+      - "PROTROMBINA"
+    without_value: true
+    nested_fields:
+      quick: 
+        unit: "%"
+        matches: 
+          - "QUICK"
+      rati: 
+        unit: "%"
+        matches: 
+          - "RATI"
+      inr: 
+        unit: "%"
+        matches: 
+          - "INR"
